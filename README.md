@@ -11,7 +11,7 @@ Automate the creation and setup of a Python virtual environment on macOS with ea
 
 ## Prerequisites
 
-Before using the `SetupPythonEnv.sh` script, ensure you have:
+Before using the `setup_python_env.sh` script, ensure you have:
 
 - **macOS**: The script uses AppleScript and is specific to macOS.
 - **Python 3**: Python 3 should be installed and accessible via the terminal.  
@@ -20,26 +20,18 @@ Before using the `SetupPythonEnv.sh` script, ensure you have:
 ## Installation
 
 1. **Clone the Repo**: Clone or download this repository to your local machine.
-2. **Run the Script**: Execute `SetupPythonEnv.sh` using AppleScript Editor or `osascript` from the terminal.  
+2. **Run the Script**: Execute `setup_python_env.sh` using AppleScript Editor or `osascript` from the terminal.  
 3. **Follow Prompts**: The script will guide you with dialog prompts to set up your project.
 
 ## Usage
 
-- Run `SetupPythonEnv.sh` and input your project name and desired location when prompted.
+- Run `setup_python_env.sh` and input your project name and desired location when prompted.
 - The script will:
    - Verify Python installation.
    - Create the project directory and subdirectories.
-   - Set up a virtual environment.
+   - Set up and activate a virtual environment in the new project directory as "setup_python_envenv"
    - Initialize a `src` directory and essential files.
    - Open the project in Visual Studio Code.
-
-Activate the virtual environment in Visual Studio Code's terminal:
-
-```bash
-source activate_env.sh
-```
-
-This command prepares the workspace for development by activating the virtual environment.
 
 ## Contributing
 
