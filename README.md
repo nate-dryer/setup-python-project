@@ -30,11 +30,12 @@ To fully benefit from the `SetupPythonEnv.sh` script, please ensure you meet the
 
 - Start the script by running `setup_python_env.sh`, providing your project's name and preferred location upon prompt.
 - The script will then:
-   - Confirm the Python installation.
-   - Erect the project directory and its subdirectories.
-   - Establish and activate a virtual environment named "setup_python_envenv" within your project directory.
-   - Forge a `src` directory and essential foundational files.
-   - Propel your project into Visual Studio Code for development.
+   - Confirm the Python installation
+   - Add project directory in specified pat
+   - Activate a virtual environment named "setup_python_envenv" wihtin the root
+   - Add 'SRC' folder for source files
+   - Add requiremnts.txt (blank file)
+   - Opens Visual Studio Code and cds into the virtual env directory
 
 ## Contributing
 
