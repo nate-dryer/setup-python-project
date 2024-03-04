@@ -14,7 +14,7 @@ Streamline your macOS Python project initialization with a sophisticated script 
 To fully benefit from the `SetupPythonEnv.sh` script, please ensure you meet the following requirements:
 
 - **macOS**: Tailored specifically for macOS, utilizing AppleScript for seamless automation.
-- **Python 3**: Installed and readily accessible through the terminal.
+- **Python**: Installed and readily accessible through the terminal.
 - **Visual Studio Code**: Properly installed along with the configuration of command-line utilities.
 
 ## Installation
