@@ -1,45 +1,48 @@
 # macOS Python Environment Setup Script
 
-Automate the creation and setup of a Python virtual environment on macOS with ease, including project structure creation and Visual Studio Code integration.
+Streamline your macOS Python project initialization with a sophisticated script that not only automates the creation of a Python virtual environment but also integrates seamlessly with Visual Studio Code, and crafts a ready-to-go project structure.
 
 ## Key Features
 
-- **Automated Environment Setup**: Prepares a Python virtual environment, isolating project dependencies.
-- **Project Structure Creation**: Generates directories for source files and tests, and creates essential files like `requirements.txt` and `README.md`. 
-- **Visual Studio Code Integration**: Opens the new project in Visual Studio Code, ready for development.
-- **Ease of Use**: Simple, guided setup process through dialog prompts.
+- **Automated Environment Setup**: Configures a Python virtual environment to manage project-specific dependencies separately.
+- **Project Structure Organization**: Automatically assembles directories for your source files and tests, while also generating critical files like `requirements.txt` and `README.md`.
+- **Visual Studio Code Integration**: Directly launches your fresh project within Visual Studio Code, setting you up for immediate development.
+- **User-Friendly Process**: Offers a straightforward, interactive setup experience via dialog prompts, making project configuration a breeze.
 
 ## Prerequisites
 
-Before using the `setup_python_env.sh` script, ensure you have:
+To fully benefit from the `SetupPythonEnv.sh` script, please ensure you meet the following requirements:
 
-- **macOS**: The script uses AppleScript and is specific to macOS.
-- **Python 3**: Python 3 should be installed and accessible via the terminal.  
-- **Visual Studio Code**: Ensure Visual Studio Code is installed and command-line utilities are set up.
+- **macOS**: Tailored specifically for macOS, utilizing AppleScript for seamless automation.
+- **Python 3**: Installed and readily accessible through the terminal.
+- **Visual Studio Code**: Properly installed along with the configuration of command-line utilities.
 
 ## Installation
 
-1. **Clone the Repo**: Clone or download this repository to your local machine.
-2. **Run the Script**: Execute `setup_python_env.sh` using AppleScript Editor or `osascript` from the terminal.  
-3. **Follow Prompts**: The script will guide you with dialog prompts to set up your project.
+1. **Acquire the Repository**: Secure a copy of this repository on your local machine by cloning or downloading.
+
+```git clone https://github.com/Nathandryer/setup_python_env.git```
+
+3. **Initiate the Script**: Launch `SetupPythonEnv.sh` through the AppleScript Editor or via `osascript` from the terminal.
+4. **Engage with Prompts**: The script will lead you through dialog prompts to configure your project settings meticulously.
 
 ## Usage
 
-- Run `setup_python_env.sh` and input your project name and desired location when prompted.
-- The script will:
-   - Verify Python installation.
-   - Create the project directory and subdirectories.
-   - Set up and activate a virtual environment in the new project directory as "setup_python_envenv"
-   - Initialize a `src` directory and essential files.
-   - Open the project in Visual Studio Code.
+- Start the script by running `setup_python_env.sh`, providing your project's name and preferred location upon prompt.
+- The script will then:
+   - Confirm the Python installation.
+   - Erect the project directory and its subdirectories.
+   - Establish and activate a virtual environment named "setup_python_envenv" within your project directory.
+   - Forge a `src` directory and essential foundational files.
+   - Propel your project into Visual Studio Code for development.
 
 ## Contributing
 
-Contributions to the Text Preprocessing Utility are welcome!
+Your contributions to the Text Preprocessing Utility are highly valued!
 
-1. Fork the repository.  
-2. Create a new branch for your feature or fix.
-3. Submit a pull request with a detailed description of your changes.
+1. Fork the repository.
+2. Branch out for your feature or fix.
+3. Propel a pull request with an elaborate description of your amendments.
 
 ## Contact  
 
@@ -49,4 +52,4 @@ Contributions to the Text Preprocessing Utility are welcome!
 
 ## License
 
-This project is licensed under the MIT License - for more information, refer to the LICENSE file.
+This endeavor is protected under the MIT License - for detailed information, see the LICENSE file.
