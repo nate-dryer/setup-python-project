@@ -8,12 +8,13 @@ Streamline your macOS Python project initialization with a sophisticated script 
 - **Project Structure Organization**: Automatically assembles directories for your source files and tests, while also generating critical files like `requirements.txt` and `README.md`.
 - **Visual Studio Code Integration**: Directly launches your fresh project within Visual Studio Code, setting you up for immediate development.
 - **User-Friendly Process**: Offers a straightforward, interactive setup experience via dialog prompts, making project configuration a breeze.
+- **Cross-Platform Compatibility**: Enhanced to support additional operating systems beyond macOS, broadening the project's accessibility.
 
 ## Prerequisites
 
 To fully benefit from the `SetupPythonEnv.sh` script, please ensure you meet the following requirements:
 
-- **macOS**: Tailored specifically for macOS, utilizing AppleScript for seamless automation.
+- **Operating System**: While initially tailored for macOS, the script now supports additional operating systems. Please refer to the `setup_python_env.sh` script for specific OS requirements.
 - **Python**: Installed and readily accessible through the terminal.
 - **Visual Studio Code**: Properly installed along with the configuration of command-line utilities.
 
@@ -23,23 +24,23 @@ To fully benefit from the `SetupPythonEnv.sh` script, please ensure you meet the
 
 ```git clone https://github.com/Nathandryer/setup_python_env.git```
 
-3. **Initiate the Script**: Launch `SetupPythonEnv.sh` through the AppleScript Editor or via `osascript` from the terminal.
-4. **Engage with Prompts**: The script will lead you through dialog prompts to configure your project settings meticulously.
+2. **Initiate the Script**: Launch `SetupPythonEnv.sh` through the appropriate method for your operating system.
+3. **Engage with Prompts**: The script will lead you through dialog prompts to configure your project settings meticulously.
 
 ## Usage
 
 - Start the script by running `setup_python_env.sh`, providing your project's name and preferred location upon prompt.
 - The script will then:
    - Confirm the Python installation
-   - Add project directory in specified pat
-   - Activate a virtual environment named "setup_python_envenv" wihtin the root
-   - Add 'SRC' folder for source files
-   - Add requiremnts.txt (blank file)
-   - Opens Visual Studio Code and cds into the virtual env directory
+   - Create the project directory in the specified path
+   - Activate a virtual environment named after your project within the root directory
+   - Add a 'src' folder for source files and a 'tests' folder for test files
+   - Generate a `requirements.txt` file listing all necessary Python packages for the project
+   - Open Visual Studio Code and navigate into the virtual environment directory
 
 ## Contributing
 
-Your contributions to the Text Preprocessing Utility are highly valued!
+Your contributions to the project are highly valued!
 
 1. Fork the repository.
 2. Branch out for your feature or fix.

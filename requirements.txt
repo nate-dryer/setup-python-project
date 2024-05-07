@@ -1,0 +1,5 @@
+# List of necessary Python packages for the project
+Django>=3.2,<4.0
+djangorestframework>=3.12.0,<4.0
+Pillow>=8.0.0,<9.0.0
+requests>=2.25.0,<3.0.0
