@@ -21,10 +21,23 @@ def main():
         f.write(f'# {project_name}\n\nThis is a newly created project.')
 
     # Set up a Python virtual environment within the project directory
-    venv.create(os.path.join(full_project_path, 'venv'), with_pip=True)
+    # Check if the virtual environment already exists to optimize setup
+    venv_path = os.path.join(full_project_path, 'venv')
+    if not os.path.exists(venv_path):
+        venv.create(venv_path, with_pip=True)
+    else:
+        print("Virtual environment already exists. Skipping creation.")
 
     # Open the project directory in Visual Studio Code
-    subprocess.run(['code', full_project_path])
+    # Added error handling for subprocess call
+    try:
+        subprocess.run(['code', full_project_path], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to open Visual Studio Code: {e}")
+
+# Include comments to explain optimization techniques and error handling
+# Optimization: Check for existing virtual environment before creation to avoid unnecessary setup.
+# Error Handling: Manage potential subprocess failures when opening Visual Studio Code.
 
 if __name__ == "__main__":
     main()

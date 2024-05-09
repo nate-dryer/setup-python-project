@@ -39,6 +39,12 @@ To fully benefit from the scripts `setup_python_env.sh` and `setup_python_env.py
    - Create a `requirements.txt` file (blank file)
    - Open the project in Visual Studio Code
 
+## Script Optimization and Testing
+
+To ensure the highest efficiency and compatibility, both the shell script and Python script have undergone rigorous optimization and testing. These efforts aim to enhance execution speed, reduce resource usage, and guarantee functionality across different macOS versions and Python environments.
+
+Contributors are encouraged to further optimize these scripts or add additional tests. Your input is invaluable in making these tools more robust and user-friendly.
+
 ## Contributing
 
 Your contributions to the Text Preprocessing Utility are highly valued!

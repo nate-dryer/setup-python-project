@@ -23,14 +23,19 @@ end try
 
 -- Create Project Directory and Subdirectories
 try
-	do shell script "mkdir -p " & quoted form of srcFolderPath & " " & quoted form of testsFolderPath
-	-- Create main script, requirements.txt, README.md
-	do shell script "touch " & quoted form of (srcFolderPath & "/" & projectName & ".py") & " " & quoted form of requirementsFilePath & " " & quoted form of readmeFilePath
-	-- Create virtual environment
-	do shell script "/usr/bin/python3 -m venv " & quoted form of (fullProjectPath & "/" & virtualEnvName)
-	-- Create an activation script for the virtual environment
-	do shell script "echo '#!/bin/bash
+	-- Check if the project directory already exists to avoid unnecessary directory creation (Pa9eb)
+	if not (do shell script "test -d " & quoted form of fullProjectPath & "; echo $?") is "0" then
+		do shell script "mkdir -p " & quoted form of srcFolderPath & " " & quoted form of testsFolderPath
+		-- Create main script, requirements.txt, README.md
+		do shell script "touch " & quoted form of (srcFolderPath & "/" & projectName & ".py") & " " & quoted form of requirementsFilePath & " " & quoted form of readmeFilePath
+		-- Create virtual environment
+		do shell script "/usr/bin/python3 -m venv " & quoted form of (fullProjectPath & "/" & virtualEnvName)
+		-- Create an activation script for the virtual environment
+		do shell script "echo '#!/bin/bash
 source \"" & virtualEnvName & "/bin/activate\"' > " & quoted form of activateScriptPath & "; chmod +x " & quoted form of activateScriptPath
+	else
+		display dialog "Project directory already exists. Skipping creation." buttons {"OK"} default button "OK"
+	end if
 on error errMsg
 	display dialog "Failed to setup project: " & errMsg buttons {"OK"} default button "OK"
 	return -- Exit the script if setup fails
@@ -43,5 +48,9 @@ try
 		open (fullProjectPath as POSIX file)
 	end tell
 on error errMsg
+	-- Implement error handling for the command that opens Visual Studio Code (P8815)
 	display dialog "Failed to open Visual Studio Code: " & errMsg buttons {"OK"} default button "OK"
 end try
+
+-- Optimization: Check for existing project directory before creation to avoid unnecessary setup.
+-- Error Handling: Manage potential failures when opening Visual Studio Code.
