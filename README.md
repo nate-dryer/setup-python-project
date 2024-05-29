@@ -47,12 +47,6 @@ Your contributions to the Text Preprocessing Utility are highly valued!
 2. Branch out for your feature or fix.
 3. Propel a pull request with an elaborate description of your amendments.
 
-## Contact  
-
-- **Nathan Dryer**
-- GitHub: [nathandryer](https://github.com/nathandryer)
-- Website: [www.nathandryer.com](https://www.nathandryer.com)  
-
 ## License
 
 This endeavor is protected under the MIT License - for detailed information, see the LICENSE file.
